@@ -1,0 +1,11 @@
+@font-face {
+	font-family: 'SubaccuzRegular';
+	src: url('./SubaccuzRegular.eot');
+	src: local('SubaccuzRegular'), url('./SubaccuzRegular.woff') format('woff'), url('./SubaccuzRegular.ttf') format('truetype');
+}
+/* use this class to attach this font to any element i.e. <p class="fontsforweb_fontid_194">Text with this font applied</p> */
+.fontsforweb_fontid_194 {
+	font-family: 'SubaccuzRegular' !important;
+}
+
+/* Font downloaded from FontsForWeb.com */

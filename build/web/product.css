@@ -1,0 +1,96 @@
+
+.productdetailmain{
+    
+    width:100%;
+    position:absolute;
+    top:140px;
+    height:60%;
+}
+.productdetail{
+    padding:3%;
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(SubaccuzRegular/SubaccuzRegular.woff   );
+
+}
+
+.productname{
+    color: darkblue;
+    letter-spacing: 0.1em;
+    font-family: myFirstFont;
+}
+.productimage{
+    width:50%;
+    float:left;
+    height:100%;
+    
+}
+.productimage:hover{
+    
+}
+
+.productdescription{
+    width:50%;
+    float:left;
+    height:100%;
+}
+
+.relatedproductmain{
+    width:100%;
+    position:absolute;
+    top:540px;
+    height:60%;
+}
+.relatedproductheading{
+    
+    
+    position:relative;
+    
+    
+    float:left;
+    color:midnightblue;
+    font-size:20px;
+    padding:2%;
+    height:10%;
+}
+
+.relatedproductmaterial{
+    float:left;
+    width:100%;
+    height:90%;
+}
+
+
+
+
+
+
+.allproductmain{
+    position:relative;
+    float: left;
+    top:140px;
+    width:100%;
+    height:200%;
+   
+}
+
+
+.allproductcard{
+    position: relative;
+    float: left;
+    left:4%;
+    width:16.67%;
+    border:2px solid midnightblue;
+    padding:5px;
+    margin:5px;
+}
+
+.allproductimage{
+    width:200px; height:310px;
+}
+
+button{
+    width:200px;
+}
