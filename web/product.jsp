@@ -14,6 +14,7 @@
         <title>FashPlus | Product Page</title>
         
         <link rel="stylesheet" type="text/css" href="homepage.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="authentication.css">
         <link rel="stylesheet" type="text/css" href="product.css">
         <link rel="shortcut icon" href="Images/images (15).jpg">
@@ -139,28 +140,50 @@
                         </tr>
                         <tr>
                             <td>
-                                Designer : <%=res.getString("p_designer")%>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Available : <%=res.getString("p_stock")%>
-                            </td>
-                        </tr>
-                        <tr>
+                                <table>
+                                    <tr>
+                                    <td>
+                                        Designer
+                                    </td>
+                                    <td>
+                                        <%=res.getString("p_designer")%>
+                                    </td>
+
+                                    </tr>
+                                    <tr>
+                                    <td>
+                                        Available&nbsp;&nbsp;
+                                    </td>
+                                    <td>
+                                        <%=res.getString("p_stock")%>
+                                    </td>
+                                    </tr>
+                                    <tr>
+
+                                    <td>
+                                        Price
+                                    </td>
+                                    <td>
+                                        <%=res.getString("p_price")%>
+                                    </td>
+                                    </tr>
+                                    <tr>
+                                    <td>
+                                        Ratings 
+                                    </td>
+                                    <td>
+                                        <%=res.getString("p_rate")%> <i class="fa fa-star-o" style="color:gold"></i>
+                                    </td>
+                                    </tr>
+
+                                </table>
                         
-                            <td>
-                                Price : <%=res.getString("p_price")%>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Ratings : <%=res.getString("p_rate")%>*
-                            </td>
-                            
-                        </tr>
-                        </table>
-                         <button name="Buy">Buy</button>
+                        
+                        
+                           </td>
+                        </tr> 
+                    </table>
+                    <button name="Buy">Buy</button>
                         
                         
                         <%
@@ -189,7 +212,7 @@
                 
      <div class="relatedproductmain">       
         <div class="relatedproductheading">
-               <p><i class="fa fa-yelp"></i>Related items...</p>
+               <p><i class="fa fa-yelp"></i> Related items...</p>
         </div>        
        <div class="relatedproductmaterial">
            
@@ -213,7 +236,7 @@
                      <div class="trendproductname"><%=res.getString("p_name")%></div>
                      <div class="trendproductdesigner"><%=res.getString("p_designer")%></div>
                      <div class="trendproductprice"><%=res.getString("p_price")%>/-</div>
-                     <div class="trendproductrate"><%=res.getString("p_rate")%>*</div>
+                     <div class="trendproductrate"><%=res.getString("p_rate")%> <i class="fa fa-star-o" style="color:gold"></i></div>
             </a>
              
         </div>

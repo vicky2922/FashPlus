@@ -128,7 +128,7 @@
                      <div class="trendproductname"><%=res.getString("p_name")%></div>
                      <div class="trendproductdesigner"><%=res.getString("p_designer")%></div>
                      <div class="trendproductprice"><%=res.getString("p_price")%>/-</div>
-                     <div class="trendproductrate"><%=res.getString("p_rate")%>*</div>
+                     <div class="trendproductrate"><%=res.getString("p_rate")%> <i class="fa fa-star-o" style="color:gold"></i></div>
             </a></td>
              
             
