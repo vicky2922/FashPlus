@@ -67,7 +67,7 @@
                             <img class="dropbtn" src="<%=res.getString("image")%>" width="40px" height="40px">
                           <div class="dropdown-content">
                               <center><p><%=res.getString("email")%></p></center><br>
-                            <a href="#">Your Cart</a>
+                            <a href="cartservlet">My Cart</a>
                             <a href="#">Edit </a>
                             <a href="logout.jsp" style="float:right;">Logout</a>
 

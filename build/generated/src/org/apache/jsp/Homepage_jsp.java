@@ -96,7 +96,7 @@ public final class Homepage_jsp extends org.apache.jasper.runtime.HttpJspBase
                     //program for loggedin user 
                        try{
                         ResultSet res;
-                        String name = "SELECT image,name,email FROM userdetail where username= '"+session.getAttribute("username")+"'" ;
+                        String name = "SELECT image,name,email,user_id FROM userdetail where username= '"+session.getAttribute("username")+"'" ;
                         sqldb.connect();
                         res = sqldb.fetchdata(name);
                         while(res.next()){
@@ -120,7 +120,9 @@ public final class Homepage_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                              <center><p>");
       out.print(res.getString("email"));
       out.write("</p></center><br>\n");
-      out.write("                            <a href=\"#\">Your Cart</a>\n");
+      out.write("                            <a href=\"cartservlet?user_id=");
+      out.print(res.getString("user_id"));
+      out.write("\">My Cart</a>\n");
       out.write("                            <a href=\"#\">Edit </a>\n");
       out.write("                            <a href=\"logout.jsp\" style=\"float:right;\">Logout</a>\n");
       out.write("\n");
@@ -202,7 +204,7 @@ public final class Homepage_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("/-</div>\n");
       out.write("                     <div class=\"trendproductrate\">");
       out.print(res.getString("p_rate"));
-      out.write("*</div>\n");
+      out.write(" <i class=\"fa fa-star-o\" style=\"color:gold\"></i></div>\n");
       out.write("            </a></td>\n");
       out.write("             \n");
       out.write("            \n");

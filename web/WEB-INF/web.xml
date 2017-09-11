@@ -16,6 +16,10 @@
         <servlet-name>allproductservlet</servlet-name>
         <servlet-class>fashplus.allproductservlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>cartservlet</servlet-name>
+        <servlet-class>fashplus.cartservlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>loginservlet</servlet-name>
         <url-pattern>/loginservlet</url-pattern>
@@ -31,6 +35,10 @@
     <servlet-mapping>
         <servlet-name>allproductservlet</servlet-name>
         <url-pattern>/allproductservlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>cartservlet</servlet-name>
+        <url-pattern>/cartservlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -19,7 +19,7 @@ import javax.servlet.http.HttpSession;
  *
  * @author Vicky
  */
-public class loginservlet extends HttpServlet {
+public class cartservlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -36,38 +36,15 @@ public class loginservlet extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             try{
-                ResultSet res;
-                HttpSession session = request.getSession();
-              //  HttpSession session = request.getSession();
-                String page = (String) request.getParameter("page");
                 
-                String query="SELECT * FROM userdetail where username='"+ 
-                    request.getParameter("username")+ "' and password='" +
-                    request.getParameter("password") + "'";
-                sqldb.connect();
-                res= sqldb.fetchdata(query);
-                if (res.next()) {
-                    sqldb.connclose();
-                    session.setAttribute("username", request.getParameter("username"));
-                    session.setAttribute("user_id", request.getParameter("user_id"));
-                    
-                    if(page.equals("1")){
-                       response.sendRedirect("Homepage.jsp"); 
-                    }
-                    else if(page.equals("2")){
-                        response.sendRedirect("allproduct.jsp");
-                    }
-                    else if(page.equals("3")){
-                        response.sendRedirect("product.jsp");
-                    }
-                    
-                    
-                } 
-                else {
-                    sqldb.connclose();
-                 response.sendRedirect("Homepage.jsp");
-                }           
-            
+                HttpSession session = request.getSession();
+               
+                String user_id = (String) request.getParameter("user_id");
+                
+                session.setAttribute("user_id", request.getParameter("user_id"));
+                
+                response.sendRedirect("myCart.jsp");
+                
             }
             catch(Exception e){
                 e.printStackTrace();
